@@ -1,0 +1,32 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() 
+{
+    int age,yop,fin,arr,stp,atp;
+    cin>>age>>yop>>fin>>arr>>stp>>atp;
+    if((age>=18&&age<21)&&(yop>=2021)&&(stp>=60)&&(atp>=80))
+    {
+        if(arr<=2)
+           {
+               if(fin<=200000)
+                   cout<<"Eligible";
+               else if((fin<250000)&&(stp>=80)&&(atp>=90))
+                   cout<<"Partially Eligible";
+                    
+        }
+        else if((fin<250000)&&(stp>=80)&&(atp>=90))
+            cout<<"Partially Eligible";
+        else
+            cout<<"Not Eligible";
+            
+    }
+    else
+        cout<<"Not Eligible";
+    return 0;
+}
