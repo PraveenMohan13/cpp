@@ -1,0 +1,27 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+#include<iomanip>
+using namespace std;
+
+
+int main() {
+   int tb,tr,rs,bb,z1,z2,zz;
+    cin>>tb>>tr>>rs>>bb;
+    zz=tb/6;
+    z1=bb/6;
+    z2=bb%6;
+    float z3=z1+z2*.1;
+    float z4=rs/z3;
+    float ans=(float)tr/zz;
+    cout<<fixed<<setprecision(1)<<zz<<endl;
+    cout<<z3<<endl;
+    cout<<z4<<endl;
+    cout<<ans<<endl;
+    if(z4>ans)
+        cout<<"Eligible to Win";
+    else
+        cout<<"Not Eligible to Win";
+}
