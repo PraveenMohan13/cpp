@@ -1,0 +1,19 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    int n,m,i,a,z;
+    cin>>n>>m;
+    for(i=n;i<=m;i++)
+    {
+    a=i%10;
+    z=i/10;
+    if((a+z)+(a*z)==i)
+        cout<<i<<endl;
+    }
+}
