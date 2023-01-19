@@ -1,0 +1,59 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+   int m,rr,d,peek;
+    cin>>m>>rr>>d;
+    peek=(rr*20/100)+rr;
+    switch(m)
+    {
+        case 4:
+        case 5:
+        case 6:
+        case 11:
+        case 12:
+            cout<<peek*d;
+            break;
+        case 1:
+        case 2:
+        case 3:
+        case 7:
+        case 8:
+        case 9:
+        case 10:
+            cout<<rr*d;
+            break;
+        default:
+            cout<<"Invalid Input";
+    }
+}
+    
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+   int m,rr,d,peek;
+    cin>>m>>rr>>d;
+    peek=(rr*20/100)+rr;
+    if(m<=12&&m>=1)
+    {
+    if(m==4||m==5||m==6||m==11||m==12)
+        cout<<peek*d;
+    else
+        cout<<rr*d;
+    }
+    else
+        cout<<"Invalid Input";
+}
+    
