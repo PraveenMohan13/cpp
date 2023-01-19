@@ -1,0 +1,25 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+int main() {
+    int a,b,c,smin=0,i;
+    cin>>a>>b>>c;
+    if((a>b&&a<c)||(a<b&&a>c))
+        smin=a;
+    else if((b>a&&b<c)||(b<a&&b>c))
+        smin=b;
+    else
+        smin=c;
+    cout<<"The treasure is in the box which has the number "<<smin<<endl;
+    for(i=smin;i>=1;i--)
+    {
+        if(a%i==0&&b%i==0&&c%i==0)
+        {  cout<<"The code to open the box is "<<i;
+           break;
+        }
+    }   
+    return 0;
+}
