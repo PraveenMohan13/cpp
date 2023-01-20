@@ -1,0 +1,29 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+int main() {
+   int n,temp,fact,sum=0;
+    cin>>n;
+    temp=n;
+    while(temp)
+    {
+        
+        int rem=temp%10;
+        fact=1;
+        for(int i=1;i<=rem;i++)
+        {
+            fact=fact*i;
+            
+        }
+         sum=sum+fact;
+        temp=temp/10;
+    }
+    if(n==sum)
+        cout<<"Yes";
+    else
+        cout<<"No";
+    return 0;
+}
