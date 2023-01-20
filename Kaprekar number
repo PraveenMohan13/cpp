@@ -1,0 +1,21 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+int main() {
+    int n,temp,ans,r,q,p,fans;
+    cin>>n;
+    temp=n*n;
+    ans=floor(log10(n)+1);
+    p=pow(10,ans);
+    r=temp%p;
+    q=temp/p;
+    fans=r+q;
+   if(n==fans)
+       cout<<"Kaprekar Number";
+    else
+        cout<<"Not a Kaprekar Number";
+    return 0;
+}
