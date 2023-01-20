@@ -1,0 +1,22 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+int main() {
+  int n,i,j,h,k;
+    cin>>n;
+    int L=1,R=n*n+1;
+    for(i=n;i>0;i--)
+    {
+        for(h=n;h>i;h--)
+            cout<<"--";
+        for(j=0;j<i;j++)
+            cout<<L++<<"*";
+        for(k=0;k<i-1;k++)
+            cout<<R++<<"*";
+        cout<<R<<"\n";
+        R=R-2*(i-1);
+    }
+}
