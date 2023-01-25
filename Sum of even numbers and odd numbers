@@ -1,0 +1,23 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main() {
+    int n;
+    cin>>n;
+    int a[n],i,odd=0,evn=0;
+    for(i=0;i<n;i++)
+    {
+        cin>>a[i];
+        if(a[i]%2==0)
+            evn=evn+a[i];
+        else
+            odd=odd+a[i];
+    }
+        cout<<"The sum of the even numbers in the array is "<<evn<<endl;
+        cout<<"The sum of the odd numbers in the array is "<<odd;
+    return 0;
+}
