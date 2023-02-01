@@ -1,0 +1,33 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+int main() {
+    int n,i;
+    cin>>n;
+    int a[n];
+    for(i=0;i<n;i++)
+        cin>>a[i];
+    int s=0,e=n-1;
+   while(s<e)
+   {
+       while(a[s]%2==0&&s<e)
+           s++;
+       while(a[e]%2!=0&&s<e)
+           e--;
+       if(s<e)
+       {
+           int temp=a[s];
+           a[s]=a[e];
+           a[e]=temp;
+               s++;
+               e--;
+       } 
+   }
+    cout<<"Array after Segregation"<<endl;
+    for(i=0;i<n;i++)
+        cout<<a[i]<<" ";
+    return 0;
+}
