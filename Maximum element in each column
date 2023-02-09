@@ -1,0 +1,25 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+#include <climits>
+using namespace std;
+int main() {
+    int r,c,i,j,t=INT_MIN;
+cin>>r>>c;
+int a[r][c];
+for(i=0;i<r;i++)
+    for(j=0;j<c;j++)
+        cin>>a[i][j];
+for(i=0;i<c;i++)
+{
+    for(j=0;j<r;j++)
+    {
+      if(a[j][i]>t)
+        t=a[j][i];   
+    }
+    cout<<t<<endl;
+    t=INT_MIN;
+}
+}
