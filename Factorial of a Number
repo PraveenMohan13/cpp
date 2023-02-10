@@ -1,0 +1,19 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+int fun(int);
+int main() {
+    int n;
+    cin>>n;
+    cout<<"The factorial of "<<n<<" is "<<fun(n);
+}
+int fun(int n)
+{
+    if(n==0||n==1)
+        return 1;
+    else
+        return n*fun(n-1);
+}
