@@ -1,0 +1,60 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+int main() {
+   int n,a,i,r;
+    cin>>n;
+    while(n--)
+    {int c0=0,ans=0;
+        cin>>a;
+        while(a!=0){
+            r=a%10;
+            if(r==0)
+                c0++;
+            else
+                ans=(ans*10)+r;
+            a=a/10;
+        }
+       cout<<ans;
+        for(i=0;i<c0;i++)
+            cout<<"0";
+    cout<<endl;}
+    
+    return 0;
+}
+--------------------------------------------------------------------------------------------------------------------------------------------------
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+int fun(int a)
+{
+    int r,c1=0,c2=0,i;
+    while(a)
+    {
+        r=a%10;
+        if(r==1)
+            c1++;
+        else
+            c2++;
+        a=a/10;
+    }
+    for(i=0;i<c1;i++)
+        cout<<"1";
+    for(i=0;i<c2;i++)
+        cout<<"0";
+    return 0;
+}
+int main() {
+    int n,a,b;
+    cin>>n;
+    cin>>a>>b;
+    fun(a);
+    cout<<endl;
+    fun(b);
+}
