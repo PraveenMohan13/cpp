@@ -1,0 +1,25 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+int fun(int a[],int n)
+{
+    int sum=0;
+    if(n<0)
+        return 0;
+    else
+        sum=a[n-1];
+    return sum+fun(a,n-1);
+}
+
+int main() {
+    int n;
+    cin>>n;
+    int a[n],i;
+    for(i=0;i<n;i++)
+        cin>>a[i];
+    cout<<fun(a,n);
+    return 0;
+}
