@@ -6,7 +6,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-
 int main() {
    int n=0,i=0,max=INT_MIN,t1=0,t2=0,f1=0,f2=0;
     cin>>n;
