@@ -1,0 +1,23 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    int n,i=0,j=0;
+    cin>>n;
+    int a[n];
+    for(i=0;i<n;i++)
+        cin>>a[i];
+    sort(a,a+n);
+    i=0;j=n-1;
+    while(i<j){
+        cout<<a[j]<<" "<<a[i]<<endl;
+        i++;j--;}
+    if(n%2!=0)
+        cout<<a[i]<<" 0";
+    return 0;
+}
