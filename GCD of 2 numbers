@@ -1,0 +1,20 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+int fun(int first,int sec)
+{
+    if(sec==0)
+        return first;
+    else
+        return fun(sec,first%sec);
+}
+
+int main() {
+int first,second;
+    cin>>first>>second;
+    cout<<fun(first,second);
+    return 0;
+}
