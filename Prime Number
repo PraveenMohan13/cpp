@@ -1,0 +1,28 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+int fun(int n,int i)
+{
+    if(i==1)
+        return 1;
+    else
+    {
+        if(n%i==0)
+            return 0;
+        return fun(n,i-1);             
+    }
+}
+
+int main() {
+int n,ans;
+    cin>>n;
+    ans=fun(n,n/2);
+    if(ans==0)
+        cout<<"Not a Prime Number";
+    else
+        cout<<"Prime Number";
+    return 0;
+}
