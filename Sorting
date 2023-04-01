@@ -1,0 +1,41 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    string s;
+    cin>>s;
+    int i,j,n=s.length();
+    for(i=0;i<n;i++)
+        for(j=0;j<n-1-i;j++)
+            if(s[j]>s[j+1])
+                swap(s[j],s[j+1]);
+                
+    for(i=0;i<n;i++)
+        cout<<s[i];
+            
+    
+    return 0;
+}
+----------------------------------------------------------------------------------------------------------------------------------
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+void fun(string str)
+{
+   sort(str.begin(), str.end());
+   cout << str;
+}
+int main() {
+string s;
+    cin>>s;
+    fun(s);
+    return 0;
+}
