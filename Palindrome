@@ -1,0 +1,98 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    string s;
+    cin>>s;
+    int l=0,len=s.size(),r=len-1,c=0;
+    while(l<r)
+    {
+        if(s[l]==s[r])
+        {
+            l++;
+            r--;
+            c++;
+        }
+    else
+        break;
+    }
+    if(c==len/2)
+        cout<<"Palindrome";
+    else
+        cout<<"Not a Palindrome";
+
+
+    return 0;
+}
+---------------------------------------------------------------------------------------------------------
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    string s,n;
+    cin>>s;
+    n=s;
+    reverse(n.begin(),n.end());
+    if(n==s)
+        cout<<"Palindrome";
+    else
+        cout<<"Not a Palindrome";
+
+    return 0;
+}
+--------------------------------------------------------------------------------------------------------------------
+#include <iostream>
+using namespace std;
+int main() {
+    string s;
+    cin>>s;
+    int l=s.length();
+    for(int i=0;i<l;i++)
+    {
+        if(s[i]!=s[l-1-i])
+        {
+            cout<<"Not a Palindrome";
+            return 0; 
+            //exit(0); its same as return
+        }
+    }
+    cout<<"Palindrome";
+    return 0;
+}
+-----------------------------------------------------------------------------------------------------------------------------------
+
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+string pali(string s)
+{
+    string t = s;
+    reverse(t.begin(), t.end());
+    if (s == t)
+        return "Palindrome";
+    else 
+        return "Not a Palindrome";
+}
+int main()
+{
+    string s;
+    cin>>s;
+    cout << pali(s);
+ 
+    return 0;
+}
