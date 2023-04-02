@@ -1,0 +1,26 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    union std
+    {
+        char g;
+        char reg[15];
+        float mark;
+        int fee;
+    }z;
+    cin>>z.g;
+    cout<<"Grade is: "<<z.g<<endl;
+    cin>>z.reg;
+    cout<<"Rollno is: "<<z.reg<<endl;
+    cin>>z.mark;
+    cout<<"Mark is: "<<z.mark<<endl;
+    cin>>z.fee;
+    cout<<"Fees paid is: "<<z.fee;
+    return 0;
+}
