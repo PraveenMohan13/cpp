@@ -1,0 +1,33 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+   
+    struct dis
+    {
+        int ft;
+        float in;
+    }z1,z2,ans;
+    cin>>z1.ft>>z1.in;
+    cin>>z2.ft>>z2.in;
+    ans.ft=z1.ft+z2.ft;
+    ans.in=z1.in+z2.in;
+    
+    while(ans.in>12.0)
+    {
+        ans.in-=12.0;
+        ans.ft++;
+    }   
+    
+    cout<<ans.ft<<"'-"<<ans.in<<"\"";
+    
+    
+        
+    
+    return 0;
+}
