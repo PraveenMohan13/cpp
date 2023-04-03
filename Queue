@@ -1,17 +1,47 @@
-import java.io.*;
-import java.util.*;
-public class Solution 
-{
-    public static void main(String[] args) 
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+int main() {
+   int n,c,i,b=0,r=0;
+        cin>>n>>c;
+        r=c;
+        int a[n];
+        for(i=0;i<n;i++)
+            cin>>a[i];
+        
+    for(i=0;i<n;i++)
     {
-        Scanner z=new Scanner(System.in);
+        if(a[i]>r)
+        {
+            b++;
+            r=c;
+        }
+    r-=a[i];
+    }
+
+    if(r<c)
+        cout<<b+1;
+}
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+
         int n,bc,i,sum=0,b=0;
-        n=z.nextInt();
-        bc=z.nextInt();
-        int a[]=new int[n];
+        cin>>n>>bc;
+        int a[n];
         for(i=0;i<n;i++)
         {
-            a[i]=z.nextInt();
+            cin>>a[i];
             if(sum+a[i]>bc)
             {
                 b++;
@@ -20,6 +50,5 @@ public class Solution
             else
                 sum=sum+a[i];
         }
-        System.out.println(b+1);
+        cout<<b+1;
     }
-}
