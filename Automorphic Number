@@ -1,0 +1,32 @@
+#include<stdio.h>
+int main() {
+    int n=51,f=0;
+    int z=n*n;
+    while(n)
+    {
+        if(n%10 != z%10)
+        {
+            f=1;
+            break;
+        }
+        n=n/10;
+        z=z/10;
+    }
+    if(f==0)
+        printf("Automorphic Number");
+    else
+        printf("Not Automorphic Number");
+}
+-----------------------------------------------------------------------------------------------------------------------
+#include<stdio.h>
+#include<math.h>
+int main() {
+    int n=51,c=0,ans=0;
+    int z=n*n;
+    c=floor(log10(n))+1;
+    if(n==z%(int)pow(10,c))
+        printf("Automorphic Number");
+    else
+        printf("Not Automorphic Number");
+}
+    
