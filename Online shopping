@@ -9,6 +9,32 @@ using namespace std;
 int main() {
     int fp,fd,fs,sp,sd,ss,ap,ad,as,ans1,ans2,ans3;
     cin>>fp>>fd>>fs>>sp>>sd>>ss>>ap>>ad>>as;
+    ans1=fp-(fp*fd/100.0)+fs;
+    ans2=sp-(sp*sd/100.0)+ss;
+    ans3=ap-(ap*ad/100.0)+as;
+    cout<<"In Flipkart: Rs."<<ans1<<endl;
+    cout<<"In Snapdeal: Rs."<<ans2<<endl;
+    cout<<"In Amazon: Rs."<<ans3<<endl;
+    if(ans1<=ans2&&ans1<=ans3)
+        cout<<"Choose Flipkart";
+    else if(ans2<=ans3)
+        cout<<"Choose Snapdeal";
+    else
+    cout<<"Choose Amazon";
+}
+
+===========================================================================
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    int fp,fd,fs,sp,sd,ss,ap,ad,as,ans1,ans2,ans3;
+    cin>>fp>>fd>>fs>>sp>>sd>>ss>>ap>>ad>>as;
     ans1=(fp-(fp*(0.01*fd)))+fs;
     ans2=(sp-(sp*(0.01*sd)))+ss;
     ans3=(ap-(ap*(0.01*ad)))+as;
