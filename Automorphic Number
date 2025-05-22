@@ -1,3 +1,23 @@
+string fun(int n,int sq)
+{
+    while(n>0)
+    {
+        if(n%10!=sq%10)
+            return "Given number is not an Automorphic number";
+        n=n/10;
+        sq=sq/10;
+    }
+     return "Given number is Automorphic number";
+}
+int main() {
+    int n;
+    cin>>n;
+    int sq=n*n;
+    cout<<fun(n,sq);
+    return 0;
+}
+
+=======================================================================================
 #include<stdio.h>
 int main() {
     int n=51,f=0;
